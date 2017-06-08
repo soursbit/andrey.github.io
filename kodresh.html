@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Задача про словарь &mdash; Документация andrey 1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="genindex.html"/>
+        <link rel="search" title="Поиск" href="search.html"/>
+    <link rel="top" title="Документация andrey 1" href="index.html"/>
+        <link rel="prev" title="Лекция 5: Порядок организации защиты персональных данных. Организационно-распорядительная документация" href="test5.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> andrey
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="test.html">Лекция 1: Основы информационной безопасности</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test2.html">Лекция 2: Персональные данные. Законодательство в области защиты персональных данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test3.html">Лекция 3: Автоматизированная и неавтоматизированная обработка персональных данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test4.html">Лекция 4: Модель угроз ПД. Организационно-распорядительная документация по защите ПД</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test5.html">Лекция 5: Порядок организации защиты персональных данных. Организационно-распорядительная документация</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Задача про словарь</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">andrey</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Задача про словарь</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/kodresh.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Задача про словарь<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Сегодня я разберу одну из олимпиадных задач, довольно простую.
+Суть задачи в том, чтобы из англо-латинского словаря сделать латино-английский.
+Примеры тестов</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="hll"> Входные данные
+</span><span class="hll">
+</span><span class="hll"> 3
+</span><span class="hll"> apple - malum, pomum, popula
+</span><span class="hll"> fruit - baca, bacca, popum
+</span><span class="hll"> punishment - malum, multa
+</span></pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="hll">Выходные данные
+</span><span class="hll">
+</span><span class="hll"> 7
+</span><span class="hll"> baca - fruit
+</span><span class="hll"> bacca - fruit
+</span><span class="hll"> malum - apple, punishment
+</span><span class="hll"> multa - punishment
+</span><span class="hll"> pomum - apple
+</span><span class="hll"> popula - apple
+</span><span class="hll"> popum - fruit
+</span></pre></div>
+</div>
+<p>Входные данные черпаются из input.txt, вывод сбрасывается в output.txt. Довольно стандартное требование, про <a class="reference external" href="https://pythonworld.ru/tipy-dannyx-v-python/fajly-rabota-s-fajlami.html">работу с файлами в python</a> я недавно писал. Входные данные лексикографически отсортированы, и выходные данные тоже требуются отсортированными.</p>
+<p>Вначале я покажу своё решение, потом начну объяснять. Итак, моё решение:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="hll"><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;input.txt&#39;</span><span class="p">)</span>
+</span><span class="hll"><span class="n">N</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</span><span class="hll"><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span class="hll"><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+</span><span class="hll">     <span class="n">words</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; - &#39;</span><span class="p">)</span>
+</span><span class="hll">     <span class="n">en</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class="hll">     <span class="n">lat</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
+</span><span class="hll">     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">lat</span><span class="p">:</span>
+</span><span class="hll">         <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+</span><span class="hll">             <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">en</span><span class="p">)</span>
+</span><span class="hll">         <span class="k">else</span><span class="p">:</span>
+</span><span class="hll">             <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">en</span><span class="p">]</span>
+</span><span class="hll"> <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span class="hll">
+</span><span class="hll"> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+</span><span class="hll">     <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="hll"> <span class="n">g</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;output.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</span><span class="hll"> <span class="n">g</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span class="hll"> <span class="k">for</span> <span class="n">lat</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+</span><span class="hll">     <span class="n">g</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">lat</span> <span class="o">+</span> <span class="s1">&#39; - &#39;</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">lat</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span class="hll">
+</span><span class="hll"> <span class="n">g</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></pre></div>
+</div>
+<p>А теперь объяснение. Приготовились… :)</p>
+<p>Открываем файл, читаем число N (оно нам не понадобится); создаём пустой <a class="reference external" href="https://pythonworld.ru/tipy-dannyx-v-python/slovari-dict-funkcii-i-metody-slovarej.html">словарь</a>.</p>
+<p>Отделяем слово от его переводов; из строки с переводами получаем <a class="reference external" href="https://pythonworld.ru/tipy-dannyx-v-python/spiski-list-funkcii-i-metody-spiskov.html">список</a> латинских слов.</p>
+<p>Далее смотрим, есть ли латинское слово в нашем словаре. Если есть - дописываем ещё один английский перевод. Если нет - пишем его. После махинаций закрываем файл. Далее нужно все списки переводов отсортировать (требования задачи).</p>
+<p>Открываем файл на запись. Первой строкой записываем число получившихся слов. Далее в отсортированном порядке записываем латинские слова, затем их переводы. Закрываем файл.</p>
+<p>Задача решена, все тесты пройдены. Несомненно, возможны и другие решения, но это мне показалось наиболее красивым.</p>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="test5.html" class="btn btn-neutral" title="Лекция 5: Порядок организации защиты персональных данных. Организационно-распорядительная документация" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, andrey.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
